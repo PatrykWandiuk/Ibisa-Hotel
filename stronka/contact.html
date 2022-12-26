@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Ibisa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <script>
+        function map()
+        {
+            if(screen.width <= 768)
+            {
+                document.getElementById('location').width = 300
+                document.getElementById('location').height = 300
+            }
+        }
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        let scrollUp = document.getElementById("scrollUp");
+        if(screen.width <= 768)
+        {
+            if (currentScrollPos < 30) {
+            document.getElementById("menu").style.top = "40vw";
+            document.getElementById("scrollUp").style.bottom = "-50px";
+            } else {
+            document.getElementById("menu").style.top = "-50px";
+            document.getElementById("scrollUp").style.bottom = "30px";
+            }
+        }
+        else
+        {
+            if (currentScrollPos < 30) {
+                document.getElementById("menu").style.top = "200px";
+                document.getElementById("scrollUp").style.bottom = "-50px";
+            } else {
+                document.getElementById("menu").style.top = "-50px";
+                document.getElementById("scrollUp").style.bottom = "30px";
+            }
+            }
+        }
+        function topFunction() {
+            document.body.scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+    </script>
+</head>
+<body onload="map()">
+    <div id="baner">
+        <img src="Logo.jpg" alt="Logo">
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="main.html">Main Page</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <img id="scrollUp" src="Button.png" alt="Scroll" onclick="topFunction()">
+    <div id="img">
+        <img src="Hotel1.jpg" alt="widok">
+    </div>
+    <div id="glowny">
+        <div id="contactL">
+            <h1>Contact Us</h1>
+            <h2>Address:</h2>
+            <span id="contactI">Lorem Ipsum, Lorem Ipsum 43, 43-000</span>
+            <h2>Telephone Number:</h2>
+            <span id="contactI">+00 123456789</span>
+        </div>
+        <div id="contactR">
+            <h1>Our Location (FAKE!)</h1>
+            <iframe id="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923.0645013775712!2d1.4219067864074724!3d38.90553954815338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129946bc6d9d1985%3A0xb6ca1af29357fa88!2s07800%20Ibiza%2C%20Baleary%2C%20Hiszpania!5e0!3m2!1spl!2spl!4v1672075172751!5m2!1spl!2spl" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div id="stopka">
+        <div id="Smain">
+            <div id="Selement">
+                <h2>Address</h2>
+                <p>Lorem Ipsum<br> Lorem Ipsum 43</p>
+            </div>
+            <div id="Selement">
+                <h2>Contact</h2>
+                <p>+00 123456789</p>
+            </div>
+            <div id="Selement">
+                <h2>Social Media</h2>
+                <img src="fb.png" alt="fb" id="fb">
+                <img src="insta.png" alt="insta" id="insta">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
